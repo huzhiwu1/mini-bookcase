@@ -1,0 +1,22 @@
+<van-tag type="primary" size="large">共藏书：{{count}}</van-tag>
+<van-tag type="success" size="large">共消费：{{paid}}</van-tag>
+<van-card
+ wx:for="{{bookList}}"
+ wx:key="{{item._id}}"
+  
+  tag=""
+  price="{{item.price}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  
+>
+
+  <view slot="tags">
+    <van-tag type="primary">{{item.publisher}}</van-tag>
+    <van-tag type="success">{{item.pubdate}}</van-tag>
+  </view>
+  <view slot="footer">
+    <van-button size="small" data-id="{{item._id}}" type="primary" bind:click="onBookDetail"plain>详情</van-button>
+  </view>
+</van-card>

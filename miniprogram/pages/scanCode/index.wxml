@@ -1,0 +1,21 @@
+<!--pages/scanCode/index.wxml-->
+<!-- <text>pages/scanCode/index.wxml</text> -->
+<van-button bind:click="onScanCode"type="primary" size="large">扫码加书</van-button>
+<van-card
+  price="{{bookInfo.price}}"
+  desc="{{bookInfo.author}}"
+  title="{{bookInfo.title}}"
+  thumb="{{bookInfo.pic}}"
+  wx:if="{{bookInfo.title}}"
+>
+
+  <view slot="tags">
+    <van-tag type="primary">{{bookInfo.publisher}}</van-tag>
+    <van-tag type="success">{{bookInfo.pubdate}}</van-tag>
+  </view>
+  <view slot="footer" >
+    <van-button size="small" data-id="{{bookInfo._id}}" type="primary" bind:click="onAddBook"plain>加入藏书</van-button>
+  </view>
+  
+</van-card>
+<view class="info">{{bookInfo.summary}}</view>

@@ -1,0 +1,19 @@
+<!-- miniprogram/pages/bookDetail/index.wxml -->
+<!-- <text>miniprogram/pages/bookDetail/index.wxml</text> -->
+<view class="container">
+    <van-panel use-footer-slot>
+        <view slot="header">
+            <van-card price="{{book.price}}" desc="{{book.author}}" title="book.title" thumb="{{ book.pic }}">
+                <view slot="tags">
+                    <van-tag type="primary">{{book.publisher}}</van-tag>
+                    <van-tag type="success">{{book.pubdate}}</van-tag>
+                </view>
+            </van-card>
+        </view>
+        <view>
+        <view>详情：</view>
+        {{book.summary}}
+        </view>
+        <view slot="footer"></view>
+    </van-panel>
+</view>

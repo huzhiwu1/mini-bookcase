@@ -1,0 +1,4 @@
+/* miniprogram/pages/bookDetail/index.wxss */
+.container{
+    padding:0 20rpx;
+}

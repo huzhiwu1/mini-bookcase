@@ -1,0 +1,7 @@
+/* pages/scanCode/index.wxss */
+.info{
+    box-sizing: border-box;
+    width:100%;
+    padding:20rpx;
+    letter-spacing: 1rpx;
+}
